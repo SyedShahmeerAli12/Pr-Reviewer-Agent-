@@ -1,0 +1,13 @@
+haystack-ai>=2.22.0
+httpx
+rich
+python-dotenv
+
+# OpenAI
+openai
+
+# Anthropic
+anthropic-haystack
+
+# Ollama (local)
+ollama-haystack
