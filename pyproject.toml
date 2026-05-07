@@ -1,0 +1,27 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "pr-reviewer"
+version = "0.1.0"
+description = "Automated PR reviewer powered by Haystack"
+requires-python = ">=3.10"
+dependencies = [
+    "haystack-ai>=2.22.0",
+    "sqlalchemy-haystack",
+    "httpx",
+    "rich",
+    "python-dotenv",
+    "pandas",
+]
+
+[project.optional-dependencies]
+anthropic = ["anthropic-haystack"]
+ollama = ["ollama-haystack"]
+
+[project.scripts]
+pr-reviewer = "pr_reviewer.__main__:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/pr_reviewer"]
