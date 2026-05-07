@@ -20,9 +20,9 @@ The agent gets one instruction: *review this PR*. It then decides which tools to
 ## Setup
 
 ```bash
-git clone <repo>
-cd pr-reviewer
-pip install -e ".[anthropic]"   # or leave out [anthropic] for OpenAI
+git clone https://github.com/SyedShahmeerAli12/Pr-Reviewer-Agent-.git
+cd Pr-Reviewer-Agent-
+pip install -r requirements.txt
 cp .env.example .env            # fill in your keys
 ```
 
